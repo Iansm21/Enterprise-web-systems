@@ -1,4 +1,4 @@
-//Setup//--------------------------------------------------------------------------------
+///Setup///----------------------------------------------------------------------------------------------------------------------------------------------------------------
 //express setup------------------------------------------------------------------------- 
 const express = require('express');
 const app = express();
@@ -40,7 +40,6 @@ app.use(function(req, res, next){
   })
 
 
-
 //MongoDB setup--------------------------------------------------------------------------------
 const mongoose = require('mongoose');
 
@@ -50,15 +49,11 @@ mongoose.connect(dbURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
-.then(() => console.log('Connected to DB'))
+.then(() => {
+  console.log('Connected to DB');
+  db = mongoose.connection;
+})
 .catch(err => console.log(err));
-
-// Add error handling for MongoDB connection
-mongoose.connection.on('error', (err) => {
-    console.error('MongoDB connection error:', err);
-    process.exit(-1);
-});
-
 
 
 // Start server--------------------------------------------------------------------------------
@@ -68,3 +63,89 @@ const PORT = 8080;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 
 
+///End of setup///----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+///Get Routes///----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//sets up routes for navigation
+app.get('/', function(req, res){
+    
+  //renders the SignIn page, this means that the user will always be brought here when the site is loaded
+    res.render('pages/SignIn');
+
+})
+
+//gets the sign in function, calls req and res
+app.get('/SignIn', function(req, res){
+
+  //checks if the user has logged in
+    if (req.session.loggedin) {
+
+      //sets logs the user out of the session
+        req.session.loggedin = false;
+
+      //clears the current user
+        req.session.currentuser = '';
+      
+      //renders the SignIn page
+        res.render('pages/SignIn');
+      }
+    
+    //if the user isnt logged in just render the sign in screen
+    else{
+        res.render('pages/SignIn');
+    }
+})
+
+
+
+//when the app calls UserAccount this function is run
+app.get('/Account', function(req, res){
+
+  //if the user isnt logged in redirect them to the sign screen
+    if (!req.session.loggedin) {
+        res.render('pages/SignIn');
+        return;
+      }
+
+      //if the user is logged in 
+      else{
+        
+        //finds Quotes where the client is the logged in user and returns them to an array called ClientQuotes
+        db.collection('Quotes').find({"Client": req.session.currentuser}).toArray(function (err, ClientQuotes) {
+          if (err) throw err;
+
+          //finds a single Quote where the logged in user is the Client and stores it in an array called FoundQuote
+          db.collection('Quotes').findOne({"Client": req.session.currentuser}, function (err, FoundQuote) {
+            if (err) throw err;
+            //renders the user account and passes in the users 
+           
+            res.render('pages/Account', {Quotes: ClientQuotes, Quote: FoundQuote, User: req.session.currentuser})
+
+          })
+        });
+      }
+     })
+
+//function gets called when the eventscheduler is requested
+app.get('/QuoteBuilder', function(req, res){
+
+  //checks if the user is logged in
+  if (!req.session.loggedin) {
+
+      //renders the sign in page
+      res.render('pages/SignIn');
+      return;
+    }
+
+    //if the user is logged in the quote builder is loaded
+    else{
+      res.render('pages/QuoteBuilder');
+    }
+})
+
+
+
+////post requests/////-------------------------------------------------------------------------------------------------------------
