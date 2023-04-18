@@ -1,5 +1,5 @@
 //Setup//--------------------------------------------------------------------------------
-//express setup-------------------------------------------------------------------------
+//express setup------------------------------------------------------------------------- 
 const express = require('express');
 const app = express();
 
@@ -21,7 +21,7 @@ app.use(express.static('public'));
 var db;
 
 app.use(session({
-    secret : 'example',
+    secret : 'Assessment',
     resave: true,
     saveUninitialized: true
   }));
@@ -62,7 +62,9 @@ mongoose.connection.on('error', (err) => {
 
 
 // Start server--------------------------------------------------------------------------------
+//defines the port as 8080
 const PORT = 8080;
+//sets the server to listen on port 8080 and logs a message
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 
 
