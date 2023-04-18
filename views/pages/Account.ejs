@@ -1,0 +1,23 @@
+<html>
+<!-- calls in partials to page -->
+<head>
+  <%- include('../partials/head.ejs') %>
+</head>
+
+<body>
+  <%- include('../partials/navigation.ejs') %>
+    <div class="Welcome">
+      <p> Hello <%= User %></p>
+    </div>
+
+    <div class="Welcome">
+      <p> This is your Account page </p>
+      <p> Here you can view your quotes and delete them</p>
+    </div>
+
+    <div class="AccountTitle">Your Quotes</div>
+    <%- include('../partials/loadQuotes.ejs') %>
+
+
+  </body>
+</html>

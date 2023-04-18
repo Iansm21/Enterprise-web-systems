@@ -1,0 +1,54 @@
+<form action='/AddQuote' method="post">
+    <div class="grid-item item1">
+      <br><br><br>
+      <label class="formLabel" for="eventnm">Event name</label><br>
+      <input class="nameBox" type="text" placeholder="Name your event" title="event name" id="evntnm" name="name" required><br><br>
+  
+      <label class="formLabel" for="DevChoice">Select a Developer</label><br>
+      <select id="DevChoice" required>
+        <option value="Junior">Junior</option>
+        <option value="Standard">Standard</option>
+        <option value="Senior">Senior</option>
+      </select><br><br>
+  
+      <label class="formLabel" for="eventnm">Project length (in days)</label><br>
+      <input class="nameBox" type="number" placeholder="0" title="quote days" id="quoteDays" name="days" required><br><br>
+  
+      <button type="button" onclick="calculatePrice()">Calculate Quote</button><br><br>
+  
+      <div id="quoteResult" style="display: none;">
+        <label class="formLabel" for="eventnm">Quote Price</label><br>
+        <input class="nameBox" type="number" title="quote price" id="quotePrice" name="price" readonly><br><br>
+  
+        <button type="submit">Save Quote</button>
+      </div>
+    </div>
+  </form>
+  
+  <script>
+  function calculatePrice() {
+    const developer = document.getElementById('DevChoice').value;
+    const projectLength = document.getElementById('quoteDays').value;
+    let pricePerDay;
+  
+    switch (developer) {
+      case 'Junior':
+        pricePerDay = 120;
+        break;
+      case 'Standard':
+        pricePerDay = 240;
+        break;
+      case 'Senior':
+        pricePerDay = 360;
+        break;
+      default:
+        pricePerDay = 240;
+    }
+  
+    const randomMultiplier = Math.random() * (1.2 - 0.6) + 0.6;
+    const totalPrice = pricePerDay * projectLength * randomMultiplier;
+    document.getElementById('quotePrice').value = totalPrice.toFixed(2);
+    document.getElementById('quoteResult').style.display = 'block';
+  }
+  </script>
+  

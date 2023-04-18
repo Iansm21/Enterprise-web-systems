@@ -1,0 +1,15 @@
+<!-- a loop thats shows all Quotes the user has created-->
+<ul>
+    <% Quotes.forEach(function(Quote) { %>
+    <form action="/deleteQuote" method="post">
+        <div class="Quotes">
+          <div class="Quote" id="Post1">
+            <div class="QuoteTitle"> Project: <%= Quote.ProjectName %></div>
+            <div class="QuoteText"> Duration: <%= Quote.Days %> days</div>
+            <div class="QuoteText"> Developer: <%= Quote.Developer %></div>
+            <div class="QuoteText"> Cost: <%= Quote.FinalBudget %></div>
+          </div>
+        </div>
+    </form>
+    <% }); %>
+  </ul>
