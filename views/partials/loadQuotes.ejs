@@ -4,10 +4,12 @@
     <form action="/deleteQuote" method="post">
         <div class="Quotes">
           <div class="Quote" id="Post1">
+            <input type ="hidden" name = "name" value="<%= Quote.ProjectName %>">
             <div class="QuoteTitle"> Project: <%= Quote.ProjectName %></div>
             <div class="QuoteText"> Duration: <%= Quote.Days %> days</div>
             <div class="QuoteText"> Developer: <%= Quote.Developer %></div>
             <div class="QuoteText"> Cost: <%= Quote.FinalBudget %></div>
+            <button class="editbutton" type="submit">Delete</button> 
           </div>
         </div>
     </form>

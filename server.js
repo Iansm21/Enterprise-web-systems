@@ -43,7 +43,7 @@ app.use(function(req, res, next){
 //MongoDB setup--------------------------------------------------------------------------------
 const mongoose = require('mongoose');
 
-const dbURI = process.env.MONGODB_URI || 'mongodb+srv://Admin:Admin@EnterpriseWebIS.mongodb.net/CourseworkIS?retryWrites=true&w=majority';
+const dbURI = process.env.MONGODB_URI || 'mongodb+srv://Admin:Admin@EnterpriseWebIS.mongodb.net/CourseworkIS';
 
 mongoose.connect(dbURI, {
     useNewUrlParser: true,
@@ -149,3 +149,141 @@ app.get('/QuoteBuilder', function(req, res){
 
 
 ////post requests/////-------------------------------------------------------------------------------------------------------------
+
+//when the login form is submitted this function is called 
+app.post('/login', function (req, res) {
+  console.log(JSON.stringify(req.body))
+  //reads the username from the body into a constant
+  const uname = req.body.username;
+  //reads the password from the password field
+  var pword = req.body.password;
+
+  //searches for the user in the database
+  db.collection('users').findOne({
+      "username": uname
+  }, function (err, result) {
+      if (err) throw err;
+
+      //redirects the user to the sign in page again if a user isnt found
+      if (!result) {
+          res.redirect('/SignIn');
+          console.log("user not found, check credentials")
+          return
+        }
+
+      //checks if the users password matches the one stored in the database
+      if (result.password == pword) {
+
+          //logs the user in
+          req.session.loggedin = true;
+
+          //sets the current user to uname
+          req.session.currentuser = uname;
+          
+          //redirects the user to their account
+          res.redirect('/Account');
+          //message in the console to let us know someone logged in
+          console.log("a user was recognised, welcome!")
+      
+      //redirects the user to sign in again if the user isnt found
+      }else{
+          res.redirect('/SignIn')
+          console.log("user not found :(")
+      }
+  });
+});
+
+
+//post request used to create a user, is called when a user creates an account
+app.post('/createauser', function(req, res){
+  console.log(JSON.stringify(req.body))
+  var uname = req.body.username;
+  var pword = req.body.password;
+
+  //creates a variable holding the new users login details
+  var newuser = {
+      "username" : uname,
+      "password" : pword
+  }
+
+  //checks if the username is already in the database
+  db.collection('Users').findOne({"username": uname}, function (err, result) {
+      if (err) throw err;
+
+      //if the username is not found in the collection create a new user and log them in
+      if (!result) {
+          //saves the new user into the database
+          db.collection('Users').save(newuser, function (err, result){
+              if (err) throw err;
+              console.log("user created! :)")
+              req.session.loggedin = true;
+              req.session.currentuser = uname;
+              res.redirect('/UserAccount');
+          })
+          return;
+        }
+        // if the user is found then they will be brought back to the signup screen
+        else{
+          console.log("user already exists!")
+          res.render('pages/SignUp')
+        }
+      }
+  )
+});
+
+
+
+
+//function called when the user creates an event
+app.post('/AddQuote', function(req, res){
+
+  //creates a variable to pass all the event information to the database
+  var newquote = {
+  "ProjectName" : req.body.name,
+  "Developer" : req.body.dev,
+  "Days" : req.body.days,
+  "FinalBudget" : req.body.price,
+  "Client" : req.session.currentuser
+  }
+
+  //reads the events name from the body parser
+  var projectname = req.body.name
+
+  //checks if a Quote with the same name exists for the logged in user
+  db.collection('Quotes').findOne({"ProjectName" : projectname, "Client": req.session.currentuser}, function (err, result){
+    if (err) throw err;
+
+    //if no Quote is found the Quote is created and the user is redirected to the Account screen
+    if (!result){
+      db.collection('Quotes').save(newquote, function(err, result){
+        if (err) throw err;
+        console.log('Quote Saved!')
+        res.redirect('/Account')
+    
+      })
+    }
+    //if the events name is already in the database redirect to the event builder
+    else{
+      console.log("Please ensure that you haven't already used that project title!")
+      res.redirect('/QuoteBuilder')
+
+    }
+  })
+});
+
+
+//function called when the user deletes a quote
+app.post('/deleteQuote', function(req, res){
+
+  //gets the quotes title
+  var eventnm = req.body.name
+  //gets the quotes client
+  var client = req.session.currentuser
+
+  //deletes the quote
+  db.collection('Quotes').deleteOne( { "ProjectName": eventnm, "Client": client} )
+
+  //reloads the users account
+  res.redirect("/Account")
+
+});
