@@ -227,7 +227,7 @@ app.post('/createauser', function(req, res){
               console.log("user created! :)")
               req.session.loggedin = true;
               req.session.currentuser = uname;
-              res.redirect('/UserAccount');
+              res.redirect('/Account');
           })
           return;
         }
