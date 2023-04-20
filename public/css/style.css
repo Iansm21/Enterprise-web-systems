@@ -117,7 +117,7 @@ h1 {
     top: 5%;
     white-space: nowrap;
     min-width: 53%;
-    width: 40vw;
+    width: 13vw;
     height: 25%;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -131,7 +131,7 @@ h1 {
     font-variant: small-caps;
     font-family: Trebuchet MS;
     left: 3%;
-    top: 60%;
+    top: 40%;
     min-width: 53%;
     width: 40vw;
     height: 13%;
@@ -146,7 +146,7 @@ h1 {
     font-variant: small-caps;
     font-family: Trebuchet MS;
     left: 3%;
-    top: 72%;
+    top: 52%;
     min-width: 53%;
     width: 40vw;
     height: 13%;
@@ -161,9 +161,9 @@ h1 {
     font-variant: small-caps;
     font-family: Trebuchet MS;
     left: 3%;
-    top: 84%;
+    top: 64%;
     min-width: 53%;
-    width: 13v40vww;
+    width: 40vw;
     height: 13%;
     overflow: hidden;
     color: white;
