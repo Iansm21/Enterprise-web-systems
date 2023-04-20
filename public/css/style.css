@@ -109,7 +109,7 @@ h1 {
   
   .Quote div.QuoteTitle {
     position: absolute;
-    font-size: 150%;
+    font-size: 200%;
     font-weight: bold;
     font-variant: small-caps;
     font-family: Trebuchet MS;
@@ -123,10 +123,10 @@ h1 {
     text-overflow: ellipsis;
     color: rgb(0, 255, 213);
   }
-  
+
   .Quote div.QuoteDuration {
     position: absolute;
-    font-size: 12px;
+    font-size: 150%;
     font-weight: bold;
     font-variant: small-caps;
     font-family: Trebuchet MS;
@@ -141,7 +141,7 @@ h1 {
   
   .Quote div.QuoteDev {
     position: absolute;
-    font-size: 12px;
+    font-size: 150%;
     font-weight: bold;
     font-variant: small-caps;
     font-family: Trebuchet MS;
@@ -156,7 +156,7 @@ h1 {
   
   .Quote div.QuoteCost {
     position: absolute;
-    font-size: 12px;
+    font-size: 150%;
     font-weight: bold;
     font-variant: small-caps;
     font-family: Trebuchet MS;
