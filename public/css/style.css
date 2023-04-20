@@ -242,6 +242,8 @@ h1 {
   
   
   /* settings for QuoteBuilder page */
+
+
   .nameBox{
     width: 30%; 
     left: 35%;
@@ -277,12 +279,10 @@ h1 {
     font-family:Trebuchet MS;
     font-weight: bold;
     font-variant: small-caps;
-    text-align:center;
-    float: top;
     text-decoration:underline overline;
-    padding: 6px;
     border: none;
-    margin-top: 50px;
+    position: relative;
+    margin-top: 10px;
   }
 
   /*universal button for multiple pages*/
