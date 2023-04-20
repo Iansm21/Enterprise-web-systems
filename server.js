@@ -45,7 +45,7 @@ const mongoose = require('mongoose');
 
 mongoose.set('strictQuery', false);
 
-const dbURI = 'mongodb+srv://Admin:Admin@enterprisewebis.mongodb.net/CourseworkIS';
+const dbURI = 'mongodb+srv://Admin:Admin@enterprisewebis.pypmahw.mongodb.net/EnterpriseWebIS/CourseworkIS';
 
 mongoose.connect(dbURI, {
     useNewUrlParser: true,
