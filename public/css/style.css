@@ -88,10 +88,9 @@ h1 {
     margin: 0 auto;
     padding: 20px;
   }
-  .Quote{
+  .Quote {
     position: relative;
     background-color: rgb(117, 117, 117);
-    float: top;
     min-width: 350px;
     min-height: 150px;
     width: 25vw;
@@ -101,9 +100,9 @@ h1 {
     align-items: center;
     flex-wrap: nowrap;
     border: 3px solid rgb(0, 255, 213);
+    display: block; /* added this line */
   }
-
-  .Quote:hover{
+  .Quote:hover {
     box-shadow: 0 0 20px 5px rgb(0, 255, 213);
   }
   
@@ -112,33 +111,34 @@ h1 {
     font-size: 150%;
     font-weight: bold;
     font-variant: small-caps;
-    font-family:Trebuchet MS;
+    font-family: Trebuchet MS;
     left: 3%;
     top: 5%;
-    white-space: nowrap; 
+    white-space: nowrap;
     min-width: 53%;
-    width: 13vw; 
+    width: 13vw;
     height: 25%;
     overflow: hidden;
-    text-overflow: ellipsis; 
-    color:rgb(0, 255, 213);
+    text-overflow: ellipsis;
+    color: rgb(0, 255, 213);
   }
-  .Quote div.QuoteText{
+  .Quote div.QuoteText {
     word-break: break-word;
-    position: relative;
+    position: absolute;
     font-size: 12px;
     font-weight: bold;
     font-variant: small-caps;
-    font-family:Trebuchet MS;
+    font-family: Trebuchet MS;
     left: 3%;
-    top: 30px;
+    top: 28%;
     min-width: 53%;
     min-height: 75%;
-    width: 13vw; 
+    width: 13vw;
     height: 13%;
     white-space: pre-wrap;
     overflow: hidden;
-}
+  }
+  
 
   
   /* settings for SignIn page */
@@ -201,16 +201,16 @@ h1 {
   }
   
   
-/* settings for Account page */
-.AccountTitle{
+  /* settings for Account page */
+  .AccountTitle{
     text-align:center;
     color: rgb(0, 255, 213);
     font-size: 25px;
     font-weight: bold;
     font-variant: small-caps;
     text-decoration:underline overline;
-    }
-    .Welcome{
+  }
+  .Welcome{
     text-align:center;
     color: rgb(0, 255, 213);
     font-size: 45px;
@@ -218,8 +218,9 @@ h1 {
     font-variant: small-caps;
     margin-top: 45px;
     margin-bottom: -30px;
-    }
-    .Quote button.Deletebutton{
+  }
+  .Quote button.Deletebutton{
+    position: absolute;
     background-color: rgb(0, 255, 213);
     border-radius:20px;
     border: 3px solid rgb(0, 255, 213);
@@ -233,11 +234,12 @@ h1 {
     font-size: max(0.5vw, 50%);
     text-align: center;
     z-index: 1;
-    }
-    .Quote button.Deletebutton:hover{
+  }
+  .Quote button.Deletebutton:hover{
     background-color: rgb(255, 255, 255);
     color:rgb(0, 255, 213);
-    }
+  }
+  
   
   /* settings for QuoteBuilder page */
 
