@@ -92,9 +92,9 @@ h1 {
     position: relative;
     background-color: rgb(117, 117, 117);
     min-width: 350px;
-    min-height: 150px;
+    min-height: 250px; /* increased height */
     width: 25vw;
-    height: 15vh;
+    height: 25vh;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -102,6 +102,7 @@ h1 {
     border: 3px solid rgb(0, 255, 213);
     display: block; /* added this line */
   }
+  
   .Quote:hover {
     box-shadow: 0 0 20px 5px rgb(0, 255, 213);
   }
@@ -122,19 +123,20 @@ h1 {
     text-overflow: ellipsis;
     color: rgb(0, 255, 213);
   }
+  
   .Quote div.QuoteText {
     word-break: break-word;
     position: relative;
-    font-size: 12px;
+    font-size: 10px; /* decreased font size */
     font-weight: bold;
     font-variant: small-caps;
     font-family: Trebuchet MS;
     left: 3%;
-    top: 28%;
+    top: 40%; /* adjusted top position */
     min-width: 53%;
-    min-height: 75%;
+    min-height: 60%;
     width: 13vw;
-    height: 13%;
+    height: 35%; /* increased height */
     white-space: pre-wrap;
     overflow: hidden;
   }
