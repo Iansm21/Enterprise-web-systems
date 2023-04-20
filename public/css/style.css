@@ -127,16 +127,16 @@ h1 {
   .Quote div.QuoteText {
     word-break: break-word;
     position: relative;
-    font-size: 10px; /* decreased font size */
+    font-size: 30px;
     font-weight: bold;
     font-variant: small-caps;
     font-family: Trebuchet MS;
     left: 3%;
-    top: 40%; /* adjusted top position */
+    top: 10%;
     min-width: 53%;
     min-height: 60%;
     width: 13vw;
-    height: 35%; /* increased height */
+    height: 20%;
     white-space: pre-wrap;
     overflow: hidden;
   }
