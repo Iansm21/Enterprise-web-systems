@@ -124,21 +124,49 @@ h1 {
     color: rgb(0, 255, 213);
   }
   
-  .Quote div.QuoteText {
-    word-break: break-word;
-    position: relative;
-    font-size: 30px;
+  .Quote div.QuoteDuration {
+    position: absolute;
+    font-size: 12px;
     font-weight: bold;
     font-variant: small-caps;
     font-family: Trebuchet MS;
     left: 3%;
-    top: 10%;
+    top: 60%;
     min-width: 53%;
-    min-height: 60%;
     width: 13vw;
-    height: 20%;
-    white-space: pre-wrap;
+    height: 13%;
     overflow: hidden;
+    color: white;
+  }
+  
+  .Quote div.QuoteDev {
+    position: absolute;
+    font-size: 12px;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-family: Trebuchet MS;
+    left: 3%;
+    top: 72%;
+    min-width: 53%;
+    width: 13vw;
+    height: 13%;
+    overflow: hidden;
+    color: white;
+  }
+  
+  .Quote div.QuoteCost {
+    position: absolute;
+    font-size: 12px;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-family: Trebuchet MS;
+    left: 3%;
+    top: 84%;
+    min-width: 53%;
+    width: 13vw;
+    height: 13%;
+    overflow: hidden;
+    color: white;
   }
   
 
