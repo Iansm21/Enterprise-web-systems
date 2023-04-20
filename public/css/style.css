@@ -1,0 +1,305 @@
+h1 {
+    color: rgb(0, 255, 213);
+    font-size: 5vw;
+    font-family:Trebuchet MS;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-align:center;
+    float: top;
+    text-decoration:underline overline;
+    margin-bottom: 4px;
+    margin-top: 2%;
+  }
+  
+  body {
+    background-color: rgb(37, 37, 37);
+  }
+  
+  /* settings for side navigation */
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(37, 37, 37);
+    overflow-x: hidden;
+    transition: 0.7s;
+    padding-top: 60px;
+  }
+  .sidenav a:active{
+    transform: translateY(4px); /* moves links in the side navigation down when clicked */
+  }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-family:Trebuchet MS;
+    color: rgb(0, 255, 213);
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav a:hover {
+    color: #ffffff;
+  }
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  
+  /* settings for side navigation icon */
+  .navicon{
+    font-size: 2vw;
+    border-radius:20px;
+    background-color: rgb(255, 255, 255);
+    min-width: 30px;
+    width: 3vw;
+    margin-left: 5%;
+    text-align: center;
+    margin-top: -5%;
+    border: 5px solid rgb(0, 255, 213);
+    cursor: pointer;
+    color:rgb(0, 255, 213);
+  }
+  .navicon:hover{
+    background-color: rgb(0, 255, 213);
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    border: 5px solid rgb(255, 255, 255);
+  }
+  .navicon:active{
+    transform: translateY(4px);
+  }
+
+  
+  
+  /* settings for Quotes */
+  .Quotes {
+    margin-top: 3%;
+    position: relative;
+    left: 35%;
+    right: 35%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .Quote{
+    position: relative;
+    background-color: rgb(117, 117, 117);
+    float: top;
+    min-width: 350px;
+    min-height: 150px;
+    width: 25vw;
+    height: 15vh;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    border: 3px solid rgb(0, 255, 213);
+  }
+
+  .Quote:hover{
+    box-shadow: 0 0 20px 5px rgb(0, 255, 213);
+  }
+  
+  .Post div.QuoteTitle {
+    position: absolute;
+    font-size: 150%;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-family:Trebuchet MS;
+    left: 3%;
+    top: 5%;
+    white-space: nowrap; 
+    min-width: 53%;
+    width: 13vw; 
+    height: 25%;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    color:rgb(0, 255, 213);
+  }
+  .Post div.QuoteText{
+    word-break: break-word;
+    position: absolute;
+    font-size: 12px;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-family:Trebuchet MS;
+    left: 3%;
+    top: 28%;
+    min-width: 53%;
+    min-height: 75%;
+    width: 13vw; 
+    height: 13%;
+    white-space: pre-wrap;
+    overflow: hidden;
+  }
+
+  
+  /* settings for SignIn page */
+  .LogInButton{
+    position: absolute;
+    background-color: rgb(0, 255, 213);
+    border-radius:20px;
+    border: 3px solid rgb(0, 255, 213);
+    width: 10%;
+    top: 20%;
+    left: 40%;
+    -ms-transform: translate(-50%, -20%);
+    transform: translate(-50%, -20%);
+    float: top;
+    margin-top: 200px;
+    font-size: 17px;
+  }
+  .LogInButton:hover{
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 255, 213);
+  }
+  .SignUpButton{
+    position: absolute;
+    background-color: rgb(0, 255, 213);
+    border-radius:20px;
+    border: 3px solid rgb(0, 255, 213);
+    width: 10%;
+    top: 20%;
+    left: 60%;
+    -ms-transform: translate(-50%, -20%);
+    transform: translate(-50%, -20%);
+    float: top;
+    margin-top: 200px;
+    font-size: 17px;
+  }
+  .SignUpButton:hover{
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 255, 213);
+  }
+
+  .UsernameBox{
+    width: 35%;
+    position: absolute;
+    left: 32.5%;
+    right: 32.5%;
+    padding: 6px;
+    border: none;
+    margin-top: 50px;
+    font-size: 17px;
+  }
+  .PasswordBox{
+    width: 35%;
+    position: absolute;
+    left: 32.5%;
+    right: 32.5%;
+    padding: 6px;
+    border: none;
+    margin-top: 125px;
+    font-size: 17px;
+  }
+  
+  
+  /* settings for Account page */
+  .AccountTitle{
+    text-align:center;
+    color: rgb(0, 255, 213);
+    font-size: 25px;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-decoration:underline overline;
+  }
+  .Welcome{
+    text-align:center;
+    color: rgb(0, 255, 213);
+    font-size: 45px;
+    font-weight: bold;
+    font-variant: small-caps;
+    margin-top: 45px;
+    margin-bottom: -30px;
+  }
+  .Quote button.Deletebutton{
+    position: absolute;
+    background-color: rgb(0, 255, 213);
+    border-radius:20px;
+    border: 3px solid rgb(0, 255, 213);
+    width: 12%;
+    min-width: 12%;
+    max-width: 13%;
+    right: 1%;
+    bottom: 1%;
+    font-weight: bold;
+    margin-top: 280px;
+    font-size: max(0.5vw, 50%);
+    text-align: center;
+    z-index: 1;
+  }
+  .Quote button.Deletebutton:hover{
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 255, 213);
+  }
+  
+  
+  /* settings for QuoteBuilder page */
+  .nameBox{
+    width: 30%; 
+    left: 35%;
+    right: 35%;
+    position: relative;
+    padding: 6px;
+    border: none;
+    margin-top: 10px;
+    font-size: 17px;
+  }
+
+  .CreateButton{
+    background-color: rgb(0, 255, 213);
+    border-radius:20px;
+    border: 3px solid rgb(0, 255, 213);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: 20%;
+    float: top;
+    margin-top: 50px;
+    font-size: 17px;
+  }
+
+  .CreateButton:hover{
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 255, 213);
+  }
+
+  .formLabel{
+    color: rgb(0, 255, 213);
+    font-size: 20px;
+    font-family:Trebuchet MS;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-align:center;
+    float: top;
+    text-decoration:underline overline;
+    padding: 6px;
+    border: none;
+    margin-top: 50px; 
+  }
+
+  /*universal button for multiple pages*/
+  .formButton{
+    background-color: rgb(0, 255, 213);
+    border-radius:20px;
+    border: 3px solid rgb(0, 255, 213);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: 20%;
+    float: top;
+    margin-top: 50px;
+    font-size: 17px;
+  }
+
+  .formButton:hover{
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 255, 213);
+  }
