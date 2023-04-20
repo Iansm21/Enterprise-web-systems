@@ -1,5 +1,5 @@
 h1 {
-    color: rgb(0, 255, 213);
+    color: red;
     font-size: 5vw;
     font-family:Trebuchet MS;
     font-weight: bold;
@@ -23,7 +23,7 @@ h1 {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(37, 37, 37);
+    background-color: rgb(97, 97, 97);
     overflow-x: hidden;
     transition: 0.7s;
     padding-top: 60px;
@@ -38,12 +38,12 @@ h1 {
     font-weight: bold;
     font-variant: small-caps;
     font-family:Trebuchet MS;
-    color: rgb(0, 255, 213);
+    color: red;
     display: block;
     transition: 0.3s;
   }
   .sidenav a:hover {
-    color: #ffffff;
+    color: black;
   }
   .sidenav .closebtn {
     position: absolute;
@@ -58,20 +58,20 @@ h1 {
   .navicon{
     font-size: 2vw;
     border-radius:20px;
-    background-color: rgb(255, 255, 255);
+    background-color: black;
     min-width: 30px;
     width: 3vw;
     margin-left: 5%;
     text-align: center;
     margin-top: -5%;
-    border: 5px solid rgb(0, 255, 213);
+    border: 5px solid red;
     cursor: pointer;
-    color:rgb(0, 255, 213);
+    color:red;
   }
   .navicon:hover{
-    background-color: rgb(0, 255, 213);
-    -webkit-text-fill-color: rgb(255, 255, 255);
-    border: 5px solid rgb(255, 255, 255);
+    background-color: red;
+    -webkit-text-fill-color: black;
+    border: 5px solid black;
   }
   .navicon:active{
     transform: translateY(4px);
@@ -90,7 +90,7 @@ h1 {
   }
   .Quote {
     position: relative;
-    background-color: rgb(117, 117, 117);
+    background-color: grey;
     min-width: 350px;
     min-height: 250px; /* increased height */
     width: 25vw;
@@ -99,12 +99,12 @@ h1 {
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
-    border: 3px solid rgb(0, 255, 213);
+    border: 3px solid red;
     display: block; /* added this line */
   }
   
   .Quote:hover {
-    box-shadow: 0 0 20px 5px rgb(0, 255, 213);
+    box-shadow: 0 0 20px 5px red;
   }
   
   .Quote div.QuoteTitle {
@@ -121,7 +121,7 @@ h1 {
     height: 25%;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: rgb(0, 255, 213);
+    color: red;
   }
 
   .Quote div.QuoteDuration {
@@ -136,7 +136,7 @@ h1 {
     width: 40vw;
     height: 13%;
     overflow: hidden;
-    color: white;
+    color: black;
   }
   
   .Quote div.QuoteDev {
@@ -151,7 +151,7 @@ h1 {
     width: 40vw;
     height: 13%;
     overflow: hidden;
-    color: white;
+    color: black;
   }
   
   .Quote div.QuoteCost {
@@ -166,7 +166,7 @@ h1 {
     width: 40vw;
     height: 13%;
     overflow: hidden;
-    color: white;
+    color: black;
   }
   
 
@@ -174,9 +174,9 @@ h1 {
   /* settings for SignIn page */
   .LogInButton{
     position: absolute;
-    background-color: rgb(0, 255, 213);
+    background-color: red;
     border-radius:20px;
-    border: 3px solid rgb(0, 255, 213);
+    border: 3px solid red;
     width: 10%;
     top: 20%;
     left: 40%;
@@ -187,14 +187,14 @@ h1 {
     font-size: 17px;
   }
   .LogInButton:hover{
-    background-color: rgb(255, 255, 255);
-    color:rgb(0, 255, 213);
+    background-color: black;
+    color:red;
   }
   .SignUpButton{
     position: absolute;
-    background-color: rgb(0, 255, 213);
+    background-color: red;
     border-radius:20px;
-    border: 3px solid rgb(0, 255, 213);
+    border: 3px solid red;
     width: 10%;
     top: 20%;
     left: 60%;
@@ -205,8 +205,8 @@ h1 {
     font-size: 17px;
   }
   .SignUpButton:hover{
-    background-color: rgb(255, 255, 255);
-    color:rgb(0, 255, 213);
+    background-color: black;
+    color:red;
   }
 
   .UsernameBox{
@@ -234,7 +234,7 @@ h1 {
   /* settings for Account page */
   .AccountTitle{
     text-align:center;
-    color: rgb(0, 255, 213);
+    color: red;
     font-size: 25px;
     font-weight: bold;
     font-variant: small-caps;
@@ -242,7 +242,7 @@ h1 {
   }
   .Welcome{
     text-align:center;
-    color: rgb(0, 255, 213);
+    color: red;
     font-size: 45px;
     font-weight: bold;
     font-variant: small-caps;
@@ -251,9 +251,9 @@ h1 {
   }
   .Quote button.Deletebutton {
     position: absolute;
-    background-color: rgb(0, 255, 213);
+    background-color: red;
     border-radius: 20px;
-    border: 3px solid rgb(0, 255, 213);
+    border: 3px solid red;
     width: 50%; 
     min-width: 24%;
     max-width: 25%;
@@ -267,8 +267,8 @@ h1 {
   }
   
   .Quote button.Deletebutton:hover{
-    background-color: rgb(255, 255, 255);
-    color:rgb(0, 255, 213);
+    background-color: black;
+    color:red;
   }
   
   
@@ -287,9 +287,9 @@ h1 {
   }
 
   .CreateButton{
-    background-color: rgb(0, 255, 213);
+    background-color: red;
     border-radius:20px;
-    border: 3px solid rgb(0, 255, 213);
+    border: 3px solid red;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -300,12 +300,12 @@ h1 {
   }
 
   .CreateButton:hover{
-    background-color: rgb(255, 255, 255);
-    color:rgb(0, 255, 213);
+    background-color: black;
+    color:red;
   }
 
   .formLabel{
-    color: rgb(0, 255, 213);
+    color: red;
     font-size: 20px;
     font-family:Trebuchet MS;
     font-weight: bold;
@@ -320,9 +320,9 @@ h1 {
 
   /*universal button for multiple pages*/
   .formButton{
-    background-color: rgb(0, 255, 213);
+    background-color: red;
     border-radius:20px;
-    border: 3px solid rgb(0, 255, 213);
+    border: 3px solid red;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -333,6 +333,6 @@ h1 {
   }
 
   .formButton:hover{
-    background-color: rgb(255, 255, 255);
-    color:rgb(0, 255, 213);
+    background-color: black;
+    color:red;
   }
