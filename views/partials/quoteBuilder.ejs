@@ -5,7 +5,7 @@
       <input class="nameBox" type="text" placeholder="Project title" title="Project Title" id="projectTitle" name="name" required><br><br>
   
       <label class="formLabel" for="devChoice">Select a Developer</label><br>
-      <select id="devChoice" name="dev" required>
+      <select class="nameBox" id="devChoice" name="dev" required>
         <option value="Junior">Junior</option>
         <option value="Standard">Standard</option>
         <option value="Senior">Senior</option>
@@ -14,13 +14,13 @@
       <label class="formLabel" for="quoteDays">Project length (in days)</label><br>
       <input class="nameBox" type="number" placeholder="0" title="quote days" id="quoteDays" name="days" required><br><br>
   
-      <button type="button" onclick="calculatePrice()">Calculate Quote</button><br><br>
+      <button class = "CreateButton" type="button" onclick="calculatePrice()">Calculate Quote</button><br><br>
   
       <div id="quoteResult" style="display: none;">
         <label class="formLabel" for="eventnm">Quote Price</label><br>
         <input class="nameBox" type="number" title="quote price" id="quotePrice" name="price" readonly><br><br>
   
-        <button type="submit">Save Quote</button>
+        <button class = "CreateButton" type="submit">Save Quote</button>
       </div>
     </div>
   </form>
