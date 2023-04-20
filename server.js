@@ -43,7 +43,9 @@ app.use(function(req, res, next){
 //MongoDB setup--------------------------------------------------------------------------------
 const mongoose = require('mongoose');
 
-const dbURI = process.env.MONGODB_URI || 'mongodb+srv://Admin:Admin@EnterpriseWebIS.mongodb.net/CourseworkIS';
+mongoose.set('strictQuery', false);
+
+const dbURI = process.env.MONGODB_URI || 'mongodb+srv://Admin:Admin@enterprisewebis.pypmahw.mongodb.net/test';
 
 mongoose.connect(dbURI, {
     useNewUrlParser: true,
@@ -57,10 +59,11 @@ mongoose.connect(dbURI, {
 
 
 // Start server--------------------------------------------------------------------------------
-//defines the port as 8080
-const PORT = 8080;
-//sets the server to listen on port 8080 and logs a message
-app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server started on port ${port}`);
+});
+
 
 
 ///End of setup///----------------------------------------------------------------------------------------------------------------------------------------------------------------
