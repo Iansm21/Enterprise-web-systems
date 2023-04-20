@@ -264,7 +264,7 @@ app.post('/AddQuote', function(req, res){
 
     //if no Quote is found the Quote is created and the user is redirected to the Account screen
     if (!result){
-      db.collection('Quotes').save(newquote, function(err, result){
+      db.collection('Quotes').insertOne(newquote, function(err, result){
         if (err) throw err;
         console.log('Quote Saved!')
         res.redirect('/Account')
