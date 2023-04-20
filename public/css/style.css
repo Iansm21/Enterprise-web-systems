@@ -125,20 +125,20 @@ h1 {
   }
   .Quote div.QuoteText{
     word-break: break-word;
-    position: absolute;
+    position: relative;
     font-size: 12px;
     font-weight: bold;
     font-variant: small-caps;
     font-family:Trebuchet MS;
     left: 3%;
-    top: 28%;
+    top: 30px;
     min-width: 53%;
     min-height: 75%;
     width: 13vw; 
     height: 13%;
     white-space: pre-wrap;
     overflow: hidden;
-  }
+}
 
   
   /* settings for SignIn page */
