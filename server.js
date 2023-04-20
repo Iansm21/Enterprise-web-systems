@@ -222,7 +222,7 @@ app.post('/createauser', function(req, res){
       //if the username is not found in the collection create a new user and log them in
       if (!result) {
           //saves the new user into the database
-          db.collection('Users').insertMany(newuser, function (err, result){
+          db.collection('Users').insertOne(newuser, function (err, result){
               if (err) throw err;
               console.log("user created! :)")
               req.session.loggedin = true;
