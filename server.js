@@ -102,6 +102,12 @@ app.get('/SignIn', function(req, res){
     }
 })
 
+//decides what to serve when /Signup is retrieved
+app.get('/SignUp', function(req,res){
+
+  //Renders the Signup page
+    res.render('pages/SignUp');
+})
 
 
 //when the app calls UserAccount this function is run
