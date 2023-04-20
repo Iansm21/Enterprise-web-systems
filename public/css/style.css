@@ -107,7 +107,7 @@ h1 {
     box-shadow: 0 0 20px 5px rgb(0, 255, 213);
   }
   
-  .Post div.QuoteTitle {
+  .Quote div.QuoteTitle {
     position: absolute;
     font-size: 150%;
     font-weight: bold;
@@ -123,7 +123,7 @@ h1 {
     text-overflow: ellipsis; 
     color:rgb(0, 255, 213);
   }
-  .Post div.QuoteText{
+  .Quote div.QuoteText{
     word-break: break-word;
     position: absolute;
     font-size: 12px;
@@ -282,7 +282,7 @@ h1 {
     text-decoration:underline overline;
     padding: 6px;
     border: none;
-    margin-top: 50px; 
+    margin-top: 50px;
   }
 
   /*universal button for multiple pages*/
