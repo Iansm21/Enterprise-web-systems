@@ -201,16 +201,16 @@ h1 {
   }
   
   
-  /* settings for Account page */
-  .AccountTitle{
+/* settings for Account page */
+.AccountTitle{
     text-align:center;
     color: rgb(0, 255, 213);
     font-size: 25px;
     font-weight: bold;
     font-variant: small-caps;
     text-decoration:underline overline;
-  }
-  .Welcome{
+    }
+    .Welcome{
     text-align:center;
     color: rgb(0, 255, 213);
     font-size: 45px;
@@ -218,9 +218,8 @@ h1 {
     font-variant: small-caps;
     margin-top: 45px;
     margin-bottom: -30px;
-  }
-  .Quote button.Deletebutton{
-    position: absolute;
+    }
+    .Quote button.Deletebutton{
     background-color: rgb(0, 255, 213);
     border-radius:20px;
     border: 3px solid rgb(0, 255, 213);
@@ -234,12 +233,11 @@ h1 {
     font-size: max(0.5vw, 50%);
     text-align: center;
     z-index: 1;
-  }
-  .Quote button.Deletebutton:hover{
+    }
+    .Quote button.Deletebutton:hover{
     background-color: rgb(255, 255, 255);
     color:rgb(0, 255, 213);
-  }
-  
+    }
   
   /* settings for QuoteBuilder page */
 
